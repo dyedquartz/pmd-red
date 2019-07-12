@@ -5,20 +5,23 @@
 
 	.text
 
+/*
 	thumb_func_start InitBGPaletteBuffer
 InitBGPaletteBuffer:
-	push {lr}
-	movs r2, 0
-	ldr r1, _0800465C
-	movs r0, 0x80
-	lsls r0, 2
-_0800463E:
-	strh r2, [r1]
-	adds r1, 0x2
-	subs r0, 0x1
-	cmp r0, 0
-	bne _0800463E
-	ldr r1, _08004660
+	@ push {lr}
+	@ movs r2, 0
+	@ ldr r1, _0800465C
+	@ movs r0, 0x80
+	@ lsls r0, 2
+@ _0800463E:
+@
+	@ strh r2, [r1]
+	@ adds r1, 0x2
+	@ subs r0, 0x1
+	@
+	@ cmp r0, 0
+	@ bne _0800463E
+	@ ldr r1, _08004660
 	movs r2, 0x1
 	adds r0, r1, 0
 	adds r0, 0x1F
@@ -30,10 +33,10 @@ _08004650:
 	pop {r0}
 	bx r0
 	.align 2, 0
-_0800465C: .4byte gUnknown_20251F0
-_08004660: .4byte gUnknown_20251D0
+@ _0800465C: .4byte gUnknown_20251F0
+@ _08004660: .4byte gUnknown_20251D0
 	thumb_func_end InitBGPaletteBuffer
-
+*/
 	thumb_func_start SetBGPaletteBufferColorRGB
 SetBGPaletteBufferColorRGB:
 	push {r4-r7,lr}
